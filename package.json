@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "source": "src/index.html",
-  "main": "index.js",
   "scripts": {
     "start": "parcel",
     "build": "rimraf dist && parcel build"
   },
   "author": "Vlad Krutenyuk",
   "license": "ISC",
+  "dependencies": {
+    "sass": "^1.50.0",
+    "three": "^0.139.2"
+  },
   "devDependencies": {
-    "parcel": "^2.4.0",
-    "parcel-reporter-static-files-copy": "^1.3.4"
+    "@parcel/transformer-sass": "^2.3.2",
+    "parcel": "^2.3.2",
+    "parcel-reporter-static-files-copy": "^1.3.4",
+    "rimraf": "^3.0.2"
   }
 }

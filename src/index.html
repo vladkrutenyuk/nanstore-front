@@ -3,12 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>NaN Store</title>
+    <link rel="stylesheet" href="index.sass">
 </head>
 <body>
-<div style="margin: 0 auto; text-align: center">
-    <h1>Super Mega Store</h1>
-    <h2>opening coming soon...</h2>
-    <p>Best clothes in the whooole world!!!!!!!</p>
-</div>
+    <header>
+        <img class="logo" src="../static/logo-grotesk.svg"  alt="">
+        <div class="body">
+            <div class="first">
+                <div class="left">
+                    <span class="nanodezhda">@NaNodezhda</span>
+                    <span class="env"></span>
+                    <span class="dir">~</span>
+                </div>
+                <div class="right">
+                    <span>♥ВИШ(0)</span>
+                    <span>КОРЗ(0)</span>
+                </div>
+            </div>
+            <div class="second">
+                <span> > </span>
+                <div class="menu-btn">магазин</div>
+                <div class="menu-btn">коллекции</div>
+                <div class="menu-btn">как_купить</div>
+                <div class="menu-btn">контакты</div>
+            </div>
+        </div>
+    </header>
+    <section class="welcome">
+        <div class="sub-slogan">from russia with love</div>
+        <div class="slogan">cloth value is not a number</div>
+        <img class="logo" src="../static/logo-grotesk.svg"  alt="">
+
+        <div class="nans">
+            <span class="cmd"> > perl -mMath::BigInt -e "print Math::BigInt->new('foo')" </span>
+            <br>
+            <span>NaN <br> nan <br> NaN% <br> NAN <br> NaNQ <br> NaNS <br> qNaN <br> sNaN <br> 1.#SNAN <br> 1.#QNAN <br> -1.#IND <br> +nan.0</span>
+        </div>
+    </section>
+
+    <div class="scroll-hint">
+        <img src="../static/arrow-down.svg"  alt="">
+        <span>скроль</span>
+        <img src="../static/arrow-down.svg"  alt="">
+    </div>
+
+    <section class="virtual-store-webgl"></section>
+
+    <section class="virtual-store">
+        <div class="sub-title">нажми чтобы зайти</div>
+        <div class="title-group">
+            <img class="right" src="../static/arrow-down.svg"  alt="">
+            <span>VIRTUAL STORE</span>
+            <img class="left" src="../static/arrow-down.svg"  alt="">
+        </div>
+    </section>
+
+    <script src="js/virtual-store.js" type="module"></script>
 </body>
 </html>
