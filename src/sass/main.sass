@@ -17,6 +17,9 @@ $header-height: 72px
   -ms-user-select: none
   user-select: none
 
+body
+  background-color: black
+
 header
   @extend %code-style-text
   @extend %no-select
@@ -124,6 +127,7 @@ section
     z-index: -1
 
   &.virtual-store
+    @extend %no-select
     width: 100%
     padding-top: 20%
     height: calc(100vh - #{$header-height})
@@ -140,19 +144,30 @@ section
     .title-group
       display: flex
       justify-content: center
-      gap: 12px
+      gap: 20px
       width: fit-content
       margin: 0 auto 0
+      transition: 200ms
+
+      &:hover
+        transform: scale(1.2)
+        cursor: pointer
+        gap: 6px
+      &:active
+        transform: scale(1.1)
+        background-color: black
+
 
       .left
-        transform: rotate(90deg)
+        transform: rotate(90deg) scale(1.2)
       .right
-        transform: rotate(-90deg)
+        transform: rotate(-90deg) scale(1.2)
 
       span
         @extend %scaled-grotesk-text
         font-size: 50px
         font-weight: 400
+        background-color: rgba(255, 255, 255, 0.6)
 
 
 
