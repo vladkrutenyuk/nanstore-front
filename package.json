@@ -5,19 +5,22 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "rimraf dist && parcel build"
+    "build": "rimraf dist && parcel build --public-url '.'",
+    "clear-remote": "ssh -p 65002 u871563031@45.84.206.101 \"pwd && cd public_html/nanstore && rm -rf *\"",
+    "send-to-remote": "scp -P 65002 -r ./dist/* u871563031@45.84.206.101:/home/u871563031/public_html/nanstore/",
+    "sync-remote": "yarn build && yarn clear-remote && yarn send-to-remote"
   },
   "author": "Vlad Krutenyuk",
   "license": "ISC",
   "dependencies": {
-    "@types/three": "^0.139.0",
-    "sass": "^1.50.0",
     "three": "^0.139.2"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.3.2",
     "parcel": "^2.3.2",
     "parcel-reporter-static-files-copy": "^1.3.4",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "@types/three": "^0.139.0",
+    "sass": "^1.50.0"
   }
 }
