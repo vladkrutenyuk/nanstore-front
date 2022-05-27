@@ -20,6 +20,9 @@ $header-height: 72px
 body
   background-color: black
 
+a
+  all: unset
+
 header
   @extend %code-style-text
   @extend %no-select
@@ -52,12 +55,11 @@ header
       justify-content: space-between
 
       > .left
-        span
-          &.nanodezhda
+          .nanodezhda
             color: #00BF00
-          &.env
+          .env
             color: #BF00BF
-          &.dir
+          .dir
             color: #BFBF00
 
       > .right
